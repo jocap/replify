@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+class REPL
+  @@usage = "usage: #{$0} PREFIX"
+
+  def initialize(prefix_list)
+
+    if prefix_list.empty?
+      STDERR.puts @@usage
+      exit
+    end
+
+    @prefix = prefix_list.join ' '
+  end
+
+  def start
+    begin
+      while true
+        print "> #{@prefix} "
+        suffix = STDIN.gets
+
+        if suffix == nil
+          raise SystemExit
+        end
+
+        suffix.chomp!
+
+        if suffix == "\f"
+          system 'clear'
+          next
+        end
+
+        system "#{@prefix} #{suffix}"
+        puts
+      end
+    rescue Interrupt
+      puts
+      self.start
+    rescue SystemExit
+      puts
+      exit
+    end
+  end
+end
+
+repl = REPL.new ARGV
+repl.start
