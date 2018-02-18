@@ -12,6 +12,8 @@ Press `^D` to exit the REPL. Press `^L^M` or `^L^J` to clear the screen.
 
 ### Example
 
+Note that `> git ` is part of the prompt.
+
     $ repl git
     > git init
     Initialized empty Git repository in /home/john/dev/tools/replify/.git/
