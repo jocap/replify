@@ -16,7 +16,7 @@ Press `^D` to exit the REPL. Press `^L^M` or `^L^J` to clear the screen.
     > git init
     Initialized empty Git repository in /home/john/dev/tools/replify/.git/
 
-    > git add replify
+    > git add repl
 
     > git commit -m 'First commit'
     [master (root-commit) 1171dfa] First commit
