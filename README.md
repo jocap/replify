@@ -1,3 +1,9 @@
+**Update:** This project has been replaced by the much higher-quality
+[ask-act][1], a Ruby library that makes it easy to build your own
+REPLs.
+
+[1]: https://github.com/jocap/ask-act
+
 # replify
 
 *Replify* is a simple and useful command-line tool to create a REPL (read-eval-print loop) for *any* command.
